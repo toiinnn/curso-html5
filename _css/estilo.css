@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@font-face {
+	font-family:'Momentos';
+	src: url('../_fonts/bubblegum-sans-regular.otf');
+}
 body {
 	 background-color: #dddddd;
 	 color: rgba(0,0,0,1);
@@ -12,7 +17,7 @@ div#interface {
 	padding: 10px;
 }
 
-p {
+p {  
 	text-align: justify;
 	text-indent: 50px;
 } 
@@ -30,7 +35,7 @@ header#cabecalho {
 }
 
 header#cabecalho h1 {
-	font-family: Arial, sans-serif;
+	font-family: 'Momentos', sans-serif;
 	font-size: 30pt;
 	padding: 0px;
 	color: #606060;
@@ -39,7 +44,7 @@ header#cabecalho h1 {
 }
 
 header#cabecalho h2 {
-	font-family: Arial, sans-serif;
+	font-family: 'Titillium Web', sans-serif;
 	padding: 0px;
 	color: #888888;
 	font-size: 15pt;
