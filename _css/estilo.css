@@ -44,7 +44,7 @@ header#cabecalho h1 {
 }
 
 header#cabecalho h2 {
-	font-family: 'Titillium Web', sans-serif;
+	font-family: 'Titillium Web', sans-serif; 
 	padding: 0px;
 	color: #888888;
 	font-size: 15pt;
@@ -121,3 +121,35 @@ nav#menu a:hover {
 	text-decoration: underline;
 }
 
+section#corpo {
+	display: block;
+	width: 550px;
+	float: left;
+	border-right: 1px solid #606060;
+	padding-right: 15px;
+}
+
+aside#lateral {
+	display: block;
+	width: 420px;
+	float: right;
+}
+
+footer#rodape {
+	clear: both;
+	border-top:1px solid #606060;
+}
+
+footer#rodape p {
+	text-align: center; 
+}
+
+footer#rodape a {
+	color: #000000;
+	text-decoration: none;
+}
+
+footer#rodape a:hover {
+	color: #0000ff;
+	text-decoration: underline;
+}
