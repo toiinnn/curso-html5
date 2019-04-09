@@ -45,7 +45,7 @@
                 </header>
         </section>
 
-        <form>
+        <form method="post" id="fContato" action="mailto:anthoin@ufrn.edu.br ">
            <fieldset>
             <legend id="id-usuario"> Identificação do Usuário </legend>
                 <p> <label for="cNome"> Nome: </label>   <input type="text" name="tNome" id="cNome" size="20" maxlength="40" placeholder="Nome Completo"> </p>
@@ -64,22 +64,43 @@
                 <legend id="endereco"> Endereço do Usuário </legend>
                    <p> <label for="cRua"> Logradouro: </label>   <input type="text" name="tRua" id="cRua" size="20" maxlength="40" placeholder="Rua, Av, ...">  </p>
                     <p> <label for="cNumero"> Número: </label>   <input type="number" name="tNumero" id="cNumero" size="20" maxlength="40" placeholder="Número da sua casa"> </p>
-                    <p> <label for="cEstado"> Estado: </label>   <input type="text" name="tEstado" id="cEstado" size="20" maxlength="40" placeholder="Digite seu estado"> </p>
-                    <p> <label for="cCidade"> Cidade: </label>   <input type="text" name="tCidade" id="cCidade" size="20" maxlength="40" placeholder="Digite sua cidade"> </p>               
+                    <p> <label for="cEstado"> Estado: </label> 
+                    <select name="tEstado" id="cEstado">
+                        <option> Rio Grande do Norte</option>
+                        <option> Paraíba </option>
+                        <option> Ceará </option>
+                        <option> Pernambuco </option>
+                        <option> Bahia </option>
+                        <option> Maranhão </option>
+                        <option> Alagoas </option>
+                        <option> Sergipe </option>
+                        <option> Piauí</option>
+
+                    </select> </p>
+                    <p> <label for="cCidade"> Cidade: </label> 
+                    <input type="text" name="tCidade" id="cCidade" maxlength="40" size="20" placeholder="Digite tua cidade:" list="cidades"> 
+                    <datalist id="cidades">
+                        <option value="Natal"></option>
+                        <option value="Fortaleza"></option>
+                        <option value="João Pessoa"></option>
+                        <option value="Recife"></option>
+                    </datalist>  </p>               
             </fieldset>
 
             <fieldset>
                 <legend id="msg-usuario">Mensagem do Usuário</legend>
-                    Grau de Urgência:
-                    Mensagem:
+                    <p><label for="cUrg"> Grau de Urgência: </label>
+                    Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10">Máx </p>
+                    <p><label> Mensagem: </label>
+                    <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem:"></textarea> </p>
             </fieldset>
 
             <fieldset>
                 <legend id="pre-venda"> Quero um Google Glass </legend>
-                    Gostaria de adquirir um Google Glass quando disponível
-                    Cor:
-                    Quantidade:
-                    Preço Total: R$
+                    <p><label> Gostaria de adquirir um Google Glass quando disponível </label> </fieldset> </p>
+                    <p><label> Cor: </label> </p>
+                    <p><label> Quantidade: </label> </p>
+                    <p><label> Preço Total: R$ </label> </p>
             </fieldset>
 
 [BOTÃO ENVIAR]     
