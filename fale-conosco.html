@@ -4,9 +4,16 @@
         <meta charset="utf-8"/>
         <title> Tudo sobre Google Glass! (flopou, pessoal) </title>
         <link rel="stylesheet" href="_css/estilo.css"/>
-    </head>
-    <script language="javascript" src="_javascript/funcoes.js"> 
-    </script>
+        <link rel="stylesheet" href="_css/form.css"/>
+        <script language="javascript" src="_javascript/funcoes.js">
+            function calc_total(){
+                var qtd = parseInt(document.getElementById('cQtd').value)
+                tot = qtd * 1500;
+                document.getElementById('cTotal').value = tot;
+            }
+        </script>
+    </head>  
+    
     <body>
     <div id="interface">
         <header id="cabecalho">
@@ -45,8 +52,8 @@
                 </header>
         </section>
 
-        <form method="post" id="fContato" action="mailto:anthoin@ufrn.edu.br ">
-           <fieldset>
+        <form method="post" id="fContato" action="mailto:anthoin@ufrn.edu.br" oninput="calc_total();">
+           <fieldset id="usuario">
             <legend id="id-usuario"> Identificação do Usuário </legend>
                 <p> <label for="cNome"> Nome: </label>   <input type="text" name="tNome" id="cNome" size="20" maxlength="40" placeholder="Nome Completo"> </p>
                 <p> <label for="cSenha"> Senha: </label> <input type="password" name="tSenha" id="cSenha" size="8" maxlength="20" placeholder="8 dígitos"> </p>
@@ -60,7 +67,7 @@
                 <p> Data de Nascimento: <input type="date" name="cData"> </p>
            </fieldset> 
             
-            <fieldset>
+            <fieldset id="endereco">
                 <legend id="endereco"> Endereço do Usuário </legend>
                    <p> <label for="cRua"> Logradouro: </label>   <input type="text" name="tRua" id="cRua" size="20" maxlength="40" placeholder="Rua, Av, ...">  </p>
                     <p> <label for="cNumero"> Número: </label>   <input type="number" name="tNumero" id="cNumero" size="20" maxlength="40" placeholder="Número da sua casa"> </p>
@@ -87,7 +94,7 @@
                     </datalist>  </p>               
             </fieldset>
 
-            <fieldset>
+            <fieldset id="mensagem">
                 <legend id="msg-usuario">Mensagem do Usuário</legend>
                     <p><label for="cUrg"> Grau de Urgência: </label>
                     Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10">Máx </p>
@@ -95,15 +102,19 @@
                     <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem:"></textarea> </p>
             </fieldset>
 
-            <fieldset>
+            <fieldset id="pre-venda">
                 <legend id="pre-venda"> Quero um Google Glass </legend>
-                    <p><label> Gostaria de adquirir um Google Glass quando disponível </label> </fieldset> </p>
-                    <p><label> Cor: </label> </p>
-                    <p><label> Quantidade: </label> </p>
-                    <p><label> Preço Total: R$ </label> </p>
+                    <p><input type="checkbox" name="tPed" id="cPed">
+                        <label for="cPed"> Gostaria de adquirir um Google Glass quando disponível </label></p>
+                    <p><label for="cCor"> Cor: </label> 
+                        <input type="color" name="tCor" id="cCor" value="#0000FF"></p>
+                    <p><label for="cQtd"> Quantidade: </label> 
+                        <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></p>
+                    <p><label for="cTotal"> Preço Total: R$ </label>
+                        <input type="text" name="tTotal" id="cTotal" placeholder="Total a pagar" readonly></p>
             </fieldset>
 
-[BOTÃO ENVIAR]     
+             <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
         </form>
 
         <footer id="rodape">
